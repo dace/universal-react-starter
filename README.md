@@ -1,7 +1,7 @@
-Universal React Starter
-=====================
+Universal React Starter with Redux
+===================================
 
-A basic Universal React starter for projects.
+A basic Universal React starter with Redux for projects.
 
 ## Credits
 
