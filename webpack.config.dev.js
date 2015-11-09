@@ -5,10 +5,10 @@ module.exports = {
   devtool: 'eval',
   entry: [
     'webpack-hot-middleware/client',
-    './app/shared/components/index'
+    './src/shared/components/index'
   ],
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
@@ -20,7 +20,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'app', 'shared', 'components')
+      include: path.join(__dirname, 'src', 'shared', 'components')
     }]
   }
 };
