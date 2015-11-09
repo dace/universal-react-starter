@@ -1,12 +1,12 @@
 {
-  "name": "react-transform-boilerplate",
+  "name": "universal-react-starter",
   "version": "1.0.0",
   "description": "",
   "scripts": {
     "clean": "rimraf dist",
-    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:webpack": "NODE_ENV=production webpack --config ./webpack.config.prod.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node ./app/server/devServer.js",
+    "start": "node ./src/server/devServer.js",
     "lint": "eslint src"
   },
   "repository": {
