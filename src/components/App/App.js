@@ -2,7 +2,7 @@
 
 import React, { Component } from 'react';
 
-export class App extends Component {
+export default class App extends Component {
   constructor(props) {
     super(props);
   }
@@ -10,7 +10,7 @@ export class App extends Component {
   render(): any {
     return (
       <div>
-        <h1>from App component</h1>
+        <p>Rendering App component (with JS)</p>
       </div>
     );
   }
