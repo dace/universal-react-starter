@@ -1,15 +1,13 @@
 [ignore]
-.*\/node_modules\/.*\/fbjs\/.*
-.*\/node_modules\/.*\/invariant\/.*
+.*\/node_modules\/fbjs\/.*
+.*\/node_modules\/invariant\/.*
 .*\/node_modules\/koa-static\/.*
 
 [include]
+./flowTest.js
 ./src/
-./data/
-./config/
 
 [libs]
-./interfaces/
 
 [options]
 esproposal.class_instance_fields=ignore

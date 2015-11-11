@@ -1,3 +1,5 @@
+/* @flow */
+
 import React, { Component } from 'react';
 
 export class App extends Component {
@@ -5,11 +7,15 @@ export class App extends Component {
     super(props);
   }
 
-  render() {
+  render(): any {
     return (
       <div>
-        <h1>Hello, World!!!</h1>
+        <h1>from App component</h1>
       </div>
     );
   }
 }
+
+// App.propTypes = {
+//   children: PropTypes.any
+// }
