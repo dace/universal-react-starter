@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'eval',
   entry: [
     'webpack-hot-middleware/client',
-    './src/shared/components/index'
+    './src/components/index'
   ],
   output: {
     path: path.join(__dirname, 'build'),
@@ -20,7 +20,22 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['babel'],
-      include: path.join(__dirname, 'src', 'shared', 'components')
+      include: path.join(__dirname, 'src')
     }]
-  }
+  },
+  babel: {
+    "plugins": ["react-transform"],
+    "extra": {
+      "react-transform": {
+        "transforms": [{
+          "transform": "react-transform-hmr",
+          "imports": ["react"],
+          "locals": ["module"]
+        }, {
+          "transform": "react-transform-catch-errors",
+          "imports": ["react", "redbox-react"]
+        }],
+      },
+    },
+  },
 };

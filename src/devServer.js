@@ -8,7 +8,7 @@ var config = require('../webpack.config.dev');
 var app = express();
 var compiler = webpack(config);
 
-var port = process.env.PORT || 3000;
+var port = process.env.WEBPACK_PORT || 9000;
 
 app.use(require('webpack-dev-middleware')(compiler, {
   noInfo: true,
@@ -17,9 +17,9 @@ app.use(require('webpack-dev-middleware')(compiler, {
 
 app.use(require('webpack-hot-middleware')(compiler));
 
-app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '..', 'shared', 'views', 'index.html'));
-});
+// app.get('/', function(req, res) {
+//   res.sendFile(path.join(__dirname, 'views', 'index.html'));
+// });
 
 app.get('*', (req, res) => {
   res.send('Error 404: File Not Found');
@@ -30,5 +30,5 @@ app.listen(port, 'localhost', function(err) {
     console.log(err);
     return;
   }
-  console.log('Listening at http://localhost:3000');
+  console.log('Listening at http://localhost:%s', port);
 });

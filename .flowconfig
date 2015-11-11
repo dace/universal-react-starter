@@ -4,7 +4,6 @@
 .*\/node_modules\/koa-static\/.*
 
 [include]
-./flowTest.js
 ./src/
 
 [libs]

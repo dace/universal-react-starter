@@ -1,5 +1,13 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { App } from './App/App';
+import { Router } from 'react-router';
+import { createHistory } from 'history';
+import routes from '../routes';
 
-render(<App />, document.getElementById('root'));
+const history = createHistory();
+
+render((
+	<Router
+		history={history}
+		routes={routes} />
+), document.getElementById('root'));

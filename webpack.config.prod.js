@@ -3,7 +3,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/shared/components/index'
+    './src/components/index'
   ],
   output: {
     path: path.join(__dirname, 'build'),
